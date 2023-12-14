@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timed Clicker Game</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background-color: #f2f2f2;
+      color: white;
+      background-image: url('/IWD/Porject/Website/istockphoto-1302197387-612x612.jpg');
+    }
+
+    h1 {
+      color: #4CAF50;
+      font-size: 36px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #score,
+    #timer,
+    #highScore {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+
+    #highScore {
+      color: #FFD700;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Timed Clicker Game</h1>
+  <h2>Click the button to increase your score:</h2>
+  <button onclick="increaseScore()">Click me!</button>
+  <p id="score">Score: 0</p>
+  <p id="timer">Time remaining: 30 seconds</p>
+  <p id="highScore">High Score: 0</p>
+  <button onclick="resetGame()">Reset Game</button>
+
+  <script>
+    let score = 0;
+    let timeRemaining = 30;
+
+    // Load the previous high score from local storage
+    let highScore = localStorage.getItem('highScore') || 0;
+    document.getElementById('highScore').innerHTML = 'High Score: ' + highScore;
+
+    function increaseScore() {
+      score++;
+      document.getElementById('score').innerHTML = 'Score: ' + score;
+
+      // Update the high score if the current score is higher
+      if (score > highScore) {
+        highScore = score;
+        document.getElementById('highScore').innerHTML = 'High Score: ' + highScore;
+        // Save the high score to local storage
+        localStorage.setItem('highScore', highScore);
+      }
+    }
+
+    function updateTimer() {
+      document.getElementById('timer').innerHTML = 'Time remaining: ' + timeRemaining + ' seconds';
+      if (timeRemaining > 0) {
+        timeRemaining--;
+      } else {
+        endGame();
+      }
+    }
+
+    function endGame() {
+      document.getElementById('score').innerHTML = 'Final Score: ' + score;
+      document.getElementById('timer').innerHTML = 'Game Over!';
+      document.getElementsByTagName('button')[0].disabled = true; // Disable the button after the game ends
+    }
+
+    function resetGame() {
+      score = 0;
+      timeRemaining = 30;
+      document.getElementById('score').innerHTML = 'Score: ' + score;
+      document.getElementById('timer').innerHTML = 'Time remaining: ' + timeRemaining + ' seconds';
+      document.getElementById('highScore').innerHTML = 'High Score: ' + highScore;
+      document.getElementsByTagName('button')[0].disabled = false; // Enable the button
+    }
+
+    // Update the timer every second
+    setInterval(updateTimer, 1000);
+  </script>
+</body>
+
+</html>

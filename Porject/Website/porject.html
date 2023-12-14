@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OdysseyRealm</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            color: #fff;
+            text-align: center;
+            background-image: url('/IWD/Porject/Website/istockphoto-1302197387-612x612.jpg');
+            font-weight: bold;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            background: #6C63FF;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+            position: relative;
+        }
+
+        nav a:hover {
+            background: #4a47a3;
+        }
+
+        nav a img {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+        }
+
+        nav a:hover img {
+            display: block;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        article {
+            position: relative;
+            flex: 0 0 45%;
+            background: #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        article:hover {
+            transform: translateY(-10px);
+        }
+
+        article img,
+        article video {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+            transition: transform 0.3s ease-in-out;
+        }
+        article video {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 15px;
+        }
+
+        article:hover img {
+            transform: scale(1.1);
+        }
+
+        article div {
+            padding: 20px;
+        }
+
+        article h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        article p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        article a {
+            display: block;
+            padding: 10px 20px;
+            background: #6C63FF;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 0 0 15px 15px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        article a:hover {
+            background: #4a47a3;
+        }
+
+        article video {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 15px;
+        }
+
+        article:hover video {
+            display: block;
+        }
+        .topleft {
+        position: absolute;
+        top: 3px;
+        left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <img src="/IWD/Porject/Website/d2d4a6b2-fe55-4484-8b8b-a5644e7ababd.png" align="left" height="100" width="100" class="topleft">
+
+    <h1>Welcome to the Gaming Odyssey!</h1>
+`
+    <nav>
+        <a href="/IWD/Porject/TREX-game/index.html" onmouseover="showMedia('game1')" onmouseout="hideMedia('game1')">T-Rex Game<img src="/IWD/Porject/Website/fede84b6-9951-49ce-808c-00a2cbf0c437-cover.png" height="150px"width="200px"></a>
+        <a href="/IWD/Porject/Angry-Birds-Clone/index.html" onmouseover="showMedia('game2')" onmouseout="hideMedia('game2')">Angry Birds<img src="/IWD/Porject/Website/WhatsApp Image 2023-12-14 at 01.00.36_6f0e69c9.jpg" height="200" width="200" ></a>
+        <a href="/IWD/Porject/clicker/main.html" onmouseover="showMedia('game3')" onmouseout="hideMedia('game3')">Fastest Finger<img src="/IWD/Porject/Website/click.jpg" height="100" width="250"></a>
+        <a href="/IWD/Porject/dropZone-game/index.html" onmouseover="showMedia('game4')" onmouseout="hideMedia('game4')">Drop Zone<img src="/IWD/Porject/Website/drop.jpg" height="170" width="170"></a>
+        <a href="#" onmouseover="showMedia('game5')" onmouseout="hideMedia('game5')">Tower Seige<img src="/IWD/Porject/Website/tower.jpg" height="200" width="170" ></a>
+        <a href="#" onmouseover="showMedia('game6')" onmouseout="hideMedia('game6')">Card Racing<img src="/IWD/Porject/Website/car.jpg" height="150" width="200"></a>
+        <a href="#" onmouseover="showMedia('game7')" onmouseout="hideMedia('game7')">Snake<img src="/IWD/Porject/Website/snak.jpg" height="170" width="170"></a>
+        <a href="/IWD/Porject/Website/About Us Page.html" onmouseover="showMedia('aboutUs')" onmouseout="hideMedia('aboutUs')">About Us<img src="/IWD/Porject/Website/d2d4a6b2-fe55-4484-8b8b-a5644e7ababd.png" height="100px" width="100px" ></a>
+    </nav>
+    <div style="font-size: large;">
+    <p>
+        Embark on a thrilling journey into the world of gaming with Prathyush and Samarth. Our carefully curated selection brings you seven captivating games, each a unique adventure waiting to be explored. From mind-bending puzzles to epic journeys, our games promise an immersive experience for every gamer.
+    </p>
+
+    <p>
+        Dive into the vibrant visuals, discover intriguing storylines, and challenge yourself with exciting gameplay. Whether you're a seasoned gamer or new to the world of browser-based games, there's something here for everyone.
+    </p>
+
+    <p>
+        Join us on this gaming odyssey, where excitement knows no bounds.
+    </p>
+    </div>
+    <p style="text-align: center;">
+        <h1>Our Most Popular Games </h1>
+    </p>
+    <script>
+        function showMedia(elementId) {
+            const mediaElement = document.getElementById(elementId);
+            if (mediaElement) {
+                mediaElement.style.display = 'block';
+            }
+        }
+
+        function hideMedia(elementId) {
+            const mediaElement = document.getElementById(elementId);
+            if (mediaElement) {
+                mediaElement.style.display = 'none';
+            }
+        }
+        function playVideo(element) {
+            const videoElement = element.querySelector('video');
+            if (videoElement) {
+                videoElement.play();
+            }
+        }
+
+        function pauseVideo(element) {
+            const videoElement = element.querySelector('video');
+            if (videoElement) {
+                videoElement.pause();
+            }
+        }
+    </script>
+    <section>
+        <article onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+            <img src="/IWD/Porject/Website/fede84b6-9951-49ce-808c-00a2cbf0c437-cover.png">
+            <video controls loop>
+                <source src="/IWD/Porject/Website/Trex - Made with Clipchamp.mp4" type="video/mp4" >
+            </video>
+            <div>
+                <h2>T-Rex Game</h2>
+                <p>The player guides a pixelated Tyrannosaurus rex across a side-scrolling landscape, avoiding obstacles to achieve a higher score.</p>
+                <a href="/IWD/Porject/TREX-game/index.html">Play the T-Rex Game</a>
+            </div>
+        </article>
+
+        <article onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+            <img src="/IWD/Porject/Website/Screenshot 2023-12-14 010532.png" height="762px" width="124 px">
+            <video controls loop>
+                <source src="/IWD/Porject/Website/WhatsApp Video 2023-12-14 at 01.16.09_73e45f5e.mp4" type="video/mp4">
+            </video>
+            <div>
+                <h2>Angry Birds</h2>
+                <p>Description of Game 2. Dive into an immersive experience with this captivating game.</p>
+                <a href="/IWD/Porject/Angry-Birds-Clone/index.html">Play Game 2</a>
+            </div>
+        </article>
+    </section>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        Contact us at prathyushm.btech23@rvu.edu.in or samarths.btech23@rvu.edu.in
+    </footer>
+</body>
+</html>
